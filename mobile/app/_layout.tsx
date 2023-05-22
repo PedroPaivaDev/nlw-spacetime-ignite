@@ -49,17 +49,19 @@ const Layout = () => {
       <StatusBar style="light" translucent />
 
       <Stack
-        /* euivalente ao children do NextJs */ screenOptions={{
+        /* euivalente ao children do NextJs */
+        screenOptions={{
           headerShown: false,
           contentStyle: { backgroundColor: 'transparent' },
+          animation: 'fade',
         }}
       >
         <Stack.Screen
           name="index" /* precisa ser o mesmo nome do arquivo */
           redirect={isUserAuth}
         />
-        <Stack.Screen name="new" />
         <Stack.Screen name="memories" />
+        <Stack.Screen name="new" />
       </Stack>
     </ImageBackground>
   )
